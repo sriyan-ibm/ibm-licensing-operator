@@ -450,7 +450,7 @@ spec:
                       - ibm-licensing-operator
                     env:
                       - name: IBM_LICENSING_IMAGE
-                        value: icr.io/cpopen/cpfs/ibm-licensing@sha256:ec137115210dae9b69cb2899ed8a5437d94c8a658ae1ae5eb295232b34b0925e
+                        value: icr.io/cpopen/cpfs/ibm-licensing:4.2.14
                       - name: WATCH_NAMESPACE
                         valueFrom:
                           fieldRef:
@@ -471,7 +471,7 @@ spec:
                             fieldPath: spec.serviceAccountName
                       - name: CRD_RECONCILE_INTERVAL
                         value: "300"
-                    image: icr.io/cpopen/ibm-licensing-operator@sha256:0d427ac013c895782653f5ce5d9644425edab7fcd0c6faeed78a2d0aa631dc50
+                    image: icr.io/cpopen/ibm-licensing-operator:4.2.14
                     imagePullPolicy: IfNotPresent
                     name: ibm-licensing-operator
                     resources:
@@ -712,8 +712,10 @@ spec:
     name: IBM
   version: 4.2.14
   relatedImages:
-    - image: icr.io/cpopen/ibm-licensing-operator@sha256:0d427ac013c895782653f5ce5d9644425edab7fcd0c6faeed78a2d0aa631dc50
+    - image: icr.io/cpopen/ibm-licensing-operator:4.2.14
       name: IBM_LICENSING_OPERATOR_IMAGE
+    - image: icr.io/cpopen/ibm-licensing-operator@sha256:0d427ac013c895782653f5ce5d9644425edab7fcd0c6faeed78a2d0aa631dc50
+      name: IBM_LICENSING_OPERATOR_IMAGE_2
     - image: icr.io/cpopen/cpfs/ibm-licensing@sha256:ec137115210dae9b69cb2899ed8a5437d94c8a658ae1ae5eb295232b34b0925e
       name: IBM_LICENSING_IMAGE
     - image: icr.io/cpopen/ibm-licensing-operator-bundle@sha256:96e6db93b2d16ba590252d6568b68f254548aaed73ec17e4bdd8d530ea668be6
